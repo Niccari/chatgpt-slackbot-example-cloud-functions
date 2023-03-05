@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+slack-bolt = "*"
+openai = "*"
+functions-framework = "*"
+google-cloud-tasks = "*"
+
+[dev-packages]
+flake8 = "*"
+autopep8 = "*"
+
+[scripts]
+dev = "bin/run_emulator.sh"
+lint = "flake8 --show-source ."
+format = "autopep8 -ivr ."
+deploy = "bin/deploy.sh"
+
+[requires]
+python_version = "3.11"
